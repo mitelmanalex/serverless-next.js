@@ -8,9 +8,9 @@ try {
   // https://github.com/serverless-nextjs/serverless-next.js/issues/157
   // Some files were moved in the dist/ directory in next.js 9.0.6
   // check the new location if the old location failed.
-  nextLoadConfig = require("next/dist/next-server/server/config").default;
+  nextLoadConfig = require("next/dist/server/config").default;
   PHASE_PRODUCTION_BUILD =
-    require("next/dist/next-server/lib/constants").PHASE_PRODUCTION_BUILD;
+    require("next/dist/shared/lib/constants").PHASE_PRODUCTION_BUILD;
 }
 
 const s3Urls = require("@mapbox/s3urls");
